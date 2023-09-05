@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="p">변경전 p태그</p>
+    <button id="bt1" onclick="ff()">카운터</button>
+    <button id="bt2" onclick="ff2()">초기화</button>
+    <script>
+        var p = document.getElementById("p")
+        var bt1 = document.getElementById("bt")
+        var cnt = 0
+
+
+        function ff(){
+            cnt ++; 
+            p.innerHTML=( cnt + "번 클릭됨")
+
+        if (cnt%2==0) {
+            p.style.backgroundColor="red"
+            p.style.color="yellow"
+        }
+        else {
+            p.style.color="white"
+            p.style.backgroundColor="black"
+        }
+
+
+
+        }
+        function ff2() {
+            cnt=0
+            p.innerHTML=("cnt ="+cnt+"으로 초기화 되었음..")
+            p.style.backgroundColor="pink"
+            p.style.color="gold"
+        }
+
+    </script>
+</body>
+</html>

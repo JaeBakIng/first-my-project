@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jscode/jquery-3.6.1.min.js"></script>
+    <script>
+        $(function(){
+            $('.p1').animate({marginLeft:'300px'},1000,function(){
+                $('body').css('background','pink')
+            })
+            $('.p2').delay(3000).animate({marginLeft:'300px'},1000)
+
+            $('#bt1').on('click', moveElement);
+            
+            function moveElement() {
+                $('.p3').animate({marginLeft:'+=50px'},2000)
+                $('.p3').stop()
+
+                $('.p4').animate({marginLeft:'+=50px'},2000)
+                //$('.p4').stop(true,true)
+
+                $('.p5').delay(1000).animate({marginLeft:'+=50px'},2000)
+            }
+        })
+    </script>
+</head>
+<body>
+    <span class="p1" style="background-color:red;">효과1</span><br><br>
+    <span class="p2" style="background-color:orange;">효과2</span><br>
+
+    <p><button id="bt1">50px 전진</button></p>
+    <span class="p3" style="background-color:yellow;">효과3</span><br><br>
+    <span class="p4" style="background-color:green;">효과4</span><br><br>
+    <span class="p5" style="background-color:blue;">효과5</span>
+</body>
+</html>

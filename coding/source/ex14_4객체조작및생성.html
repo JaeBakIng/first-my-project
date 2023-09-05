@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jscode/jquery-3.6.1.min.js"></script>
+    <script>
+        var n = 0;
+        $(function(){
+
+            $('#bt1').click(function(){
+            $('h2').replaceWith('<h3>replace method</h3>')
+            $("<p style='color:red;'>change</p>").replaceAll('div').css('color','red')
+            n++
+                $('title').html('클릭횟수'+ n)
+            if(n%2==1) {
+                $('body').css('background','cyan')
+                $(this).css('background','pink')
+                $('.sec1').css('background','green')
+                $('.sec2').css('background','')
+            }
+            else {
+                $('body').css('background','gold')
+                $(this).css('background','cyan')
+                $('.sec2').css('background','gray')
+                $('.sec1').css('background','')
+            }
+        })
+        
+        });
+    </script>
+    <button id="bt1">동작</button>
+</head>
+<body>
+    <section class='sec1' style="border :2px solid blue">
+        <h2>제목1</h2>
+        <div>내용1</div>
+        <div>내용2</div>
+    </section>
+
+    <section class="sec2" style="border :2px solid violet">
+        <h2>제목2</h2>
+        <div>내용1</div>
+        <div>내용2</div>
+    </section>
+</body>
+</html>

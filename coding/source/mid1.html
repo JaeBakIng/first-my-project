@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>input type radio</title>
+
+    
+    <input type="radio" name="fruits" value="apple" onclick="ff1()">바탕색 변경 & 클릭수 증가</input>
+    <hr>
+    <input type="radio" name="fruits" value="banana" onclick="ff2()">클릭 리셋</input>
+    <hr>
+    <h2 id="fruits">시작 전</h2>
+    <p id="p"></p>
+    <p id="p1"></p>
+</head>
+<body>
+    
+
+
+    <script>
+       var fruits = document.getElementById("fruits")
+       var p = document.getElementById("p")
+       var p1 = document.getElementById("p1")
+       var n1 = 0
+       var n2 = 0
+       
+
+
+        function ff1() {
+           
+           
+            n1++
+            
+            if (n1%2==1) {
+                document.body.style.backgroundColor="pink"
+                
+                fruits.innerHTML = "클릭수= " + n1 + "(홀수)"
+                p.innerHTML = '박민재'
+                p.style.textAlign="center"
+                p1.innerHTML=""
+            }
+            else {
+                document.body.style.backgroundColor="gold"
+                
+                fruits.innerHTML = "클릭수= " + n1 + "(짝수)"
+                p1.innerHTML = '22060022'
+                p1.style.textAlign="right"
+                p.innerHTML=""
+            }
+            
+            document.title=n1
+        
+        }
+
+        function ff2() {
+
+            document.body.style.backgroundColor="lightgray"
+            fruits.innerHTML="클릭 수 초기화"
+            document.title='클릭수 리셋'
+            p.innerHTML=""
+            p1.innerHTML=""
+            
+        }
+       
+       
+
+    </script>
+    
+</body>
+</html>

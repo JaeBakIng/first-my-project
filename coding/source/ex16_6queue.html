@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jscode/jquery-3.6.1.min.js"></script>
+    <script>
+        $(function () {
+            var a = 1
+            var cl = 0
+            $("#bt1").click(function () {
+                var num1 = 0
+                var num2 = 0
+                cl++
+                while (num1 < a) { // num1 이 a보다 작은 만큼 코드 실행
+                    $('#p1').animate({ marginLeft: '200px' }, 300)
+                        .queue(function () {
+                            $(this).css('background', 'pink')
+                            $(this).dequeue();
+                        })
+                        .animate({ marginTop: '200px' }, 300)
+                        .queue(function () {
+                           
+                            $(this).css('background', 'red')
+                            $(this).dequeue();
+                        })
+                        .animate({ marginLeft: '' }, 300)
+                        .queue(function () {
+                            $(this).css('background', 'blue')
+                            $(this).dequeue();
+                        })
+                        .animate({ marginTop: '' }, 300)
+                        .queue(function () {
+                            $('title').text("클릭횟수" + cl)
+                            $(this).css('background', '')
+                            
+                           
+                            $(this).dequeue()
+
+                            if (cl == 4) {
+                                $('title').text('22060022 박민재')
+
+                            }
+                    
+                        })
+                    num1++ 
+                }
+
+
+                if (a == 3) {
+                    a = 1
+                }
+                else {
+                    a++ // 반복할 횟수증가
+                }
+
+                for(i=1;i<=100;i++){
+                    num2+=i
+                    $('#p1').text(num2)
+                }
+                
+            })
+        })
+    </script>
+    <style>
+        #p1 {
+            margin: 0;
+            width: 50px;
+            text-align: center;
+            background-color: cyan;
+        }
+
+        #bt1 {
+            position: absolute;
+            left: 100px;
+            top: 95px;
+        }
+
+        #div1 {
+            width: 250px;
+            height: 220px;
+            border:2px solid red;
+            
+        }
+
+        * {
+            margin:0;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="div1">
+        <p id="p1">내용1</p>
+        <button id="bt1">클릭!</button>
+    </div>
+</body>
+
+</html>

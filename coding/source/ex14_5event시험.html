@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jscode/jquery-3.6.1.min.js">
+    //이벤트:사이트 방문자가 하는 모든 행위(마우스 클릭 등) 시험!!
+    //이벤트 핸들러:이벤트 발생시 실행되는 코드
+    </script>
+    <script>
+        $(function () {
+
+            $("#bt1").click(function () {
+                $("#bt1").css('background', 'lightgreen').css('color', 'red').parent().next().css('color', 'gold')
+            });
+
+            $('#bt2').on({
+                "mouseover focus": function () {
+                    $('#bt2').css('color', 'aqua')
+                    $('body').css('background', 'black')
+                },//콤마 붙혀야댐
+                "mouseout blur": function () {
+                    $('#bt2').css('color', '')
+                    $('body').css('background', '')
+                }
+            });
+
+
+        });
+    </script>
+</head>
+
+<body>
+    <p>
+        <button id="bt1">버튼1</button>
+    </p>
+    <p>내용1</p>
+    <p>
+        <button id="bt2">버튼2</button>
+    </p>
+    <p>내용2</p>
+</body>
+
+</html>

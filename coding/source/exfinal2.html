@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>input type radio</title>
+    <script src="jscode/jquery-3.6.1.min.js"></script>
+    <script>
+
+    var n1 = 0
+    var n2 = 0
+
+    $(function(){
+
+         $('#bt1').click(function(){
+             n1++
+             
+             if (n1%2==1) {
+                 $('body').css('background','pink')
+                 
+                 $('#fruits').text('클릭횟수='+n1+'(홀수)')
+                 $('#p1').text('박민재')
+                 $('#p1').css('text-align','center')
+                 $('#p2').text('')
+             }
+             else {
+                $('body').css('background','gold')
+                 
+                 $('#fruits').text('클릭횟수='+n1+'(짝수)')
+                 $('#p2').text('22060022')
+                 $('#p2').css('text-align','right')
+                 $('#p1').text('')
+             }
+             $('title').text(n1)
+         
+            })
+            
+         $('#bt2').click(function(){
+            $('body').css('background','lightgray')
+            $('#fruits').text('클릭수 초기화')
+            $('#p1').text('')
+            $('#p2').text('')
+            $('title').text('초기화 되었음...')
+         })
+         
+        })
+     </script>
+
+
+    <input type="radio" name="fruits" value="apple" id="bt1">바탕색 변경 & 클릭수 증가</input>
+    <hr>
+    <input type="radio" name="fruits" value="banana" id="bt2">클릭 리셋</input>
+    <hr>
+    <h2 id="fruits">시작 전</h2>
+    <p id="p1"></p>
+    <p id="p2"></p>
+
+
+</head>
+<body>
+    
+
+
+    
+    
+</body>
+</html>

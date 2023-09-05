@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setTimeout 현재 시각</title>
+</head>
+<body>
+    <h2 id="h2">현재 시간</h2>
+    <script>
+        function tick() {
+            var h2 = document.getElementById('h2')
+            h2.innerHTML = (new Date()).toLocaleString() //h2를 데이트 객체로써 쓴다
+            setTimeout('tick()',1000) // 1초단위로 불러옴
+        }
+        var timer = setTimeout('tick()',0)
+    </script>
+</body>
+</html>

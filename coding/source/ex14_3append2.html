@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jscode/jquery-3.6.1.min.js"></script>
+    <script>
+        $(function(){
+            var a = $('.div2').children().clone() // remove는 아얘 없애고 empty는 형체만 없고 내용은 있음
+            //$('.div2').remove()
+            //$('.div3').empty()
+            //$('.div3').append(a).css('background','orange')
+
+            $('#bt1').click(function(){
+                $('#aa').remove()
+                $('.div2').remove()
+                $('.div3').append(a).css('background','cyan')
+            });
+
+            $('#bt2').click(function(){
+                $('.div3').empty().append('<h1 id="aa">비운뒤 추가</h1>').css('background','orange').css('width','50%')
+            });
+        });
+        
+    </script>
+    <style>
+        div {border :2px solid green;}
+    </style>
+    <button id="bt1">append</button>
+    <button id="bt2">empty</button>
+    
+</head>
+<body>
+    <br>
+    <div class="div1">
+        <p>div1</p>
+        <p>내용1</p>
+    </div>
+    <hr>
+    <div class="div2">
+        <p>div2</p>
+        <p>내용2</p>
+    </div>
+    <hr>
+
+    <div class="div3">
+        <p>div3</p>
+        <p>내용3</p>
+    </div>
+</body>
+</html>

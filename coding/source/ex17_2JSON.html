@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jscode/jquery-3.6.1.min.js"></script>
+    <script>
+        $(function(){
+        var human={
+            name : "홍길동",
+             age : 28,
+          height : 178     
+        }
+        var json = JSON.stringify(human);// 객체를 한줄로 나타내주는 stringify
+        document.write(json+"<br>")
+        var human2=JSON.parse(json) // 객체중 하나의 value 값을 추출해줌
+        document.write('name='+ human2.name)
+    })
+    //lms Ajax 보기
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

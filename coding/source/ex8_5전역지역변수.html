@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전역변수 지역변수 선언</title>
+</head>
+<body>
+    <script>
+        var a = 100 //전역변수 선언 global variable
+        
+
+
+        check();
+        document.write('전역변수 a='+a)
+
+        var n = check2()
+        document.write('<br>지역변수 b='+n)
+        
+
+        function check() {
+             return a; //전역변수 선언
+        }
+
+
+        function check2() {
+            var b = 300; // 지역변수 선언
+            return b;
+            
+        }
+       
+    </script>
+</body>
+</html>

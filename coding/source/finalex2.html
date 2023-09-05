@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jscode/jquery-3.6.1.min.js"></script>
+    <script>
+        $(function () {
+            
+            $('#bt1').css('background','lightgray')
+           
+            $("#bt1").click(function () {
+                $('#p1').text('시작 전')
+                $('body').css('background','')
+             
+                var num1 = 0
+                var num2 = 0
+                var num3 = 0
+                    $('#p1').animate({ marginLeft: '220px' }, 1000)
+                            .queue(function(){
+                            for(i=1;i<=100;i++){
+                                num1+=i
+                            }
+                            $(this).text(num1)
+                            $(this).dequeue();
+                        })
+                        
+                        .animate({ marginTop: '220px' }, 1000,)
+                        .queue(function(){
+                            for(i=1;i<=100;i++){
+                                if(i%5 == 0) {
+                                    num2 +=i
+                                }
+                            }
+                            $(this).text(num2)
+                            $(this).dequeue();
+                        })
+                        
+                        
+                        .animate({ marginLeft: '' }, 1000)
+                        .queue(function(){
+                            for(i=1;i<=100;i++){
+                                if(i%10 == 0) {
+                                    num3 +=i
+                                }
+                            }
+                            $(this).text(num3)
+                            $(this).dequeue();
+                        })
+                        
+                        
+                        .animate({ marginTop: '' }, 1000)
+                        .queue(function () {
+                        
+                            $('title').text("2022 기말고사 실기2번")
+                            $(this).text('끝')
+                            $('body').css('background','gold')
+                            $(this).dequeue()
+                        })
+
+                    
+            })
+        })
+    </script>
+    <style>
+        #p1 {
+            width: 60px;
+            height:60px;
+            text-align: center;
+            background-color: cyan;
+        }
+
+        #bt1 {
+            position: absolute;
+            left: 105px;
+            top: 105px;
+            width: 70px;
+            height:70px;
+        }
+
+        #div1 {
+            width: 280px;
+            height: 280px;
+          
+            
+        
+            
+        }
+        *{
+            margin:0;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="div1">
+        <p id="p1">시작 전</p>
+        <button id="bt1">시작</button>
+    </div>
+</body>
+
+</html>

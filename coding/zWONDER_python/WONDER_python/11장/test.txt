@@ -1,0 +1,4 @@
+1line write
+2line write
+3line write
+4line write

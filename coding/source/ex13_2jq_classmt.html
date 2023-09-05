@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jscode/jquery-3.6.1.min.js"></script>
+    <script>
+        $(function(){
+            $('#p1').addClass('aqua') // p1 class 에 aqua 라는 class 를 생성한다(넣는다)
+            $('#p2').removeClass('red') // p2 태그에 red class 를 지운다
+            $('#p3').toggleClass('green') // p3 태그에 green 이 없으므로 색이 생김
+            $('#p4').toggleClass('green') // toggle 똑딱이 스위치 p4 태그에 green 이 있으므로 색이 안생김
+            $('#p5').text($('#p5').hasClass('yellow')) //p5태그 안에 yellow 클래스가 있는지 확인하여 text true 로 반환
+            $('#p1').text("$('#p1') is " + $('#p1').is(':visible'))
+            $('#p6').html('<b style="color:red;">html</b>코드삽입 테스트').css('fontSize','30px')
+            // text 는 글자만 바꾸고 html 은 안에 태그까지 몽땅 설정한값으로 바꿔줌 innerHtml과 같음
+
+        });
+    </script>
+    <style>
+        .aqua{background-color: #0ff;}
+        .red{background-color: red;}
+        .green{background-color: green;}
+        .yellow{background-color: yellow;}
+    </style>
+</head>
+<body>
+    <p id="p1">내용1</p>
+    <p id="p2" class="red">내용2</p>
+    <p id="p3">내용3</p>
+    <p id="p4" class="green">내용4</p>
+    <p id="p5" class="yellow">내용5</p>
+    <p id="p6"></p>
+</body>
+</html>

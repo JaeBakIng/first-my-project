@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>중첩 if 문</title>
+</head>
+<body>
+    <script>
+        var id= "easy1004"
+        var pw= "112233"
+
+        var userid = prompt('아이디를 입력하세요.',"")
+        var userpw = prompt('비밀번호를 입력하세요.',"")
+
+        if (id == userid){
+            if (pw == userpw){
+                document.write('박민재님 환영합니다!')
+            }
+            else{
+                alert('아이디 또는 비밀번호가 일치하지 않습니다.')
+                location.reload();
+            }
+        }
+        else {
+            alert('아이디 또는 비밀번호가 일치하지 않습니다.')
+            location.reload();
+        }
+    </script>
+</body>
+</html>

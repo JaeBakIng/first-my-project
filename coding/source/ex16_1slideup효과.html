@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jscode/jquery-3.6.1.min.js"></script>
+    <script>
+        $(function(){
+            $('#bt1').click(function(){
+                $('#p1').slideUp(1000 , 'linear' , function(){
+                    $('body').css('background','gold')
+                }),
+                $('#p1').slideDown(1000,'linear' ,function(){
+                    $('body').css('background','cyan')
+                });
+            })
+        });
+    </script>
+    <style>
+        #p1 {
+            border : 2px solid red;
+            width: 200px;
+            height: 100px;
+            background-color: green;
+        }
+    </style>
+    <button id="bt1">slide up</button>
+</head>
+<body>
+    <p id="p1"> slideup 효과</p>
+</body>
+</html>

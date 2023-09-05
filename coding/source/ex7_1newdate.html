@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>date 객체</title>
+</head>
+<body>
+    <script>
+        var today = new Date();
+        var nowMonth = today.getMonth();
+        var nowDate = today.getDate();
+        var nowDay = today.getDay();
+
+        document.write('<h1>오늘 날짜 정보</h1>')
+        document.write('현재 월:'+ nowMonth , '<br>')
+        document.write('현재 일:'+ nowDate, '<br>')
+        document.write('현재 요일:' + nowDay,'<br>')
+
+        var a = new Date(2022,9,3); // Month의 1이 0부터 시작해서 10월 하려면 9 넣어야댐! 요일도 0부터시작함! 0=일
+        var theMonth = a.getMonth()
+        var theDate = a.getDate()
+        var theDay = a.getDay()
+
+        document.write('<h1>10월 3일 날짜 정보</h1>')
+        document.write('현재 월:'+ theMonth , '<br>')
+        document.write('현재 일:'+ theDate, '<br>')
+        document.write('현재 요일:' + theDay,'<br>')
+
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

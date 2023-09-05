@@ -1,0 +1,9 @@
+.App {
+  background-color: cyan;
+}
+.Box {
+  background-color: yellow;
+  border : solid 1px red;
+  width: 100px;
+  height:60px;
+}

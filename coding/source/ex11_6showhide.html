@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jscode/jquery-3.6.1.min.js"></script>
+    <script>
+        $(function(){
+            $('#h3_1').css('fondSize','30px').css('color','red');
+
+
+            $('#bt1').click(function(){
+                $('h2').css('color','red')
+                $('body').css('background','pink')
+            })
+
+
+            $('#bt2').click(function(){
+                $('#h3_1').hide(3000);
+            })
+
+            
+            $('#bt3').click(function(){
+                $('#h3_1').text('박민재')
+                $('#h3_1').show(3000)
+                $('body').css('background','cyan')
+            })
+
+
+
+        })
+    </script>
+    <button id="bt1">bt1</button>
+    <button id="bt2">bt2</button>
+    <button id="bt3">bt2</button>
+
+</head>
+<body>
+    <h2>바탕색 변경 핑크<div id=""></div></h2>
+    <h3 id="h3_1">1번째 h3 여기 클릭 --> 사라짐</h3>
+    <h3 id="h3_2">2번째 h3 여기 클릭</h3>
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체생성함수</title>
+</head>
+<body>
+    <script>
+        function CheckWeight (name , height , weight) { // 객체함수 선언
+            this.userName = name;                       
+            this.userHeight = height;
+            this.userWeight = weight;
+            this.minWeight
+            this.maxWeight
+        
+
+        this.getInfo = function() { // 객체의 속성을 출력하는 함수
+            var str = ""
+            str += "이름:" + this.userName +","  //str에 이름 키 몸무게를 더해주는 코드
+            str += "키:" + this.userHeight +","
+            str += "몸무게:" + this.userWeight+"<br>"
+            return str;
+
+        }
+        this.getResult = function() { //객체의 몸무게와 키로 정상인지 비정상인지 판단하는 함수
+            this.minWeight = (this.userHeight - 100) * 0.9 -5
+            this.maxWeight = (this.userHeight - 100) * 0.9 +5
+
+            if (this.userWeight >= this.minWeight && this.userWeight <= this.maxWeight) {
+                return "정상 몸무게 입니다." ;
+            }
+            
+            else if (this.userWeight < this.minWeight) {
+                return "몸무게 미달입니다."
+
+                }
+            else {
+                return "몸무게 초과입니다."
+            }
+
+            
+        }
+    }
+    var jang = new CheckWeight("장보리", 168, 62); //새로운 객체 장보리씨 생성
+	var park = new CheckWeight("박달재", 180, 88); // 박달재씨 생성
+	console.log(jang);
+	console.log(park);
+
+	document.write(jang.getInfo()); //장보리씨의 객채를 getInfo함수로 넣어서 출력해줌
+	document.write(jang.getResult());  //장보리씨의 객채를 getResult함수로 넣어서 출력해줌
+    </script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jscode/jquery-3.6.1.min.js"></script>
+    <script>
+        var n = 0 
+        var w = 100
+        $(function(){
+
+            $('#bt1').click(function(){
+                n++
+                $('#aa').text(n+'번 눌렀습니다')
+                if(n%2==0) {
+                    w += 30
+                    $('#box').hide()
+                    $('#pbox').text('')
+                    $('#box').css('width',w)
+                    $('#box').css('height',w)
+                    $('body').css('background','lightgreen')
+
+                }
+                else{
+                    $('#box').show().css('border-radius','50%')
+                    $('body').css('background','lightblue')
+                }
+            })
+
+            $('#box').mouseenter(function(){
+                $(this).css('background','green')
+                $('#pbox').text('mouseenter')
+            })
+            $('#box').mouseleave(function(){
+                $(this).css('background','pink')
+                $('#pbox').text('mouseleave')
+            
+            })
+        });
+    </script>
+    <style>
+        #box{width: 100px; 
+            height: 100px;
+            padding: 20px;
+            border: 3px solid #000;
+            background-color: #ff0;
+            font-size:15px;
+            border-radius: none;}
+        #pbox {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <button id="bt1">show/hide 버튼</button>
+    <p id="aa">...</p>
+    <div id="box">
+    <p id="pbox">Hi</p>
+    </div>
+</body>
+</html>

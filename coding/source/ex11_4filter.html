@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jscode/jquery-3.6.1.min.js"></script>
+</head>
+<body>
+    <p>문단 안에 <strong>강조</strong> 표시가있다 </p>
+    <h4>이 문단도 <span><strong>마찬가지</strong></span>이다.</h4>
+    <script>
+        $('p').each(function(){ //p의 요소의 개수만큼 아래 함수 실행
+            if ($(this).text().length < 20) { //글자수 20 이하면 배경색 pink
+                $(this).find('strong').css('background','pink')}
+        })
+    </script>
+</body>
+</html>

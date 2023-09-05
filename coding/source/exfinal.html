@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jscode/jquery-3.6.1.min.js"></script>
+    <script>
+        $(function () {
+            var cl = 0
+            $("#bt1").click(function () {
+                $('#p1').text('시작')
+                var num1 = 0
+                    $('#p1').animate({ marginLeft: '240px' }, 300)
+                        
+                        .animate({ marginTop: '240px' }, 300,)
+                        .queue(function(){
+                            $(this).css('background','red')
+                            for(i=1;i<=100;i++){
+                                num1+=i
+                            }
+                            $(this).text(num1)
+                            $(this).dequeue();
+                        })
+                        
+                        
+                        .animate({ marginLeft: '' }, 300)
+                        
+                        
+                        .animate({ marginTop: '' }, 300)
+                        .queue(function () {
+                            cl++
+                            $('title').text("클릭횟수= " + cl)
+                            $(this).css('background', '')
+                            $(this).dequeue()
+                        })
+
+                    
+            })
+        })
+    </script>
+    <style>
+        #p1 {
+            width: 80px;
+            height:40px;
+            text-align: center;
+            background-color: cyan;
+        }
+
+        #bt1 {
+            position: absolute;
+            left: 125px;
+            top: 105px;
+            width: 70px;
+            height:70px;
+        }
+
+        #div1 {
+            width: 320px;
+            height: 280px;
+            
+        
+            
+        }
+        *{
+            margin:0;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="div1">
+        <p id="p1">내용1</p>
+        <button id="bt1">시작</button>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jscode/jquery-3.6.1.min.js"></script>
+
+    <script>
+        $(function () {
+            $("#bt1").on({
+                "mouseenter" :function() {
+                    $('#txt1').css('background','yellow')
+                    $(this).css('background','cyan')
+                },
+                "mouseleave": function(){ // mouseout보다 범위가 정확함 //mouseleave 범위기준, mouseout 요소기준
+                    $('#txt1').css('background','')
+                    $(this).css('background','')
+                }
+            })
+
+            $('#bt2').hover(function(){
+                $('#txt2').css('background','aqua')
+                $('body').css('background','pink')
+            },function(){
+                $('#txt2').css('background','')
+                $('body').css('background','')
+            })
+        });
+    </script>
+</head>
+
+
+<body>
+    <p><button id="bt1">mousevent</button></p>
+    <p id="txt1">txt1</p>
+
+    <p><button id="bt2">Hover</button></p>
+    <p id="txt2">txt2</p>
+
+</body>
+
+</html>

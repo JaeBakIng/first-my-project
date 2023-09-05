@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jscode/jquery-3.6.1.min.js"></script>
+    <center>
+    
+    <button id="bt_1">시간 동작</button>
+    <button id="bt_2">시간 정지/홈페이지 연결</button>
+    
+    </center>
+    <style>
+        body{
+            line-height: 5px;
+        }
+        #h3div{
+            border:2px solid blue;
+            line-height: 5px;
+            
+        }
+        #h2div{
+            border: 2px solid blue;
+            line-height: 5px;
+        }
+        #h1div{
+            border:2px solid blue;
+            line-height: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="h3div">
+    <h3 id="h3_1"></h3>
+    <h3 id="h3_2"></h3>
+    <h3 id="h3_3"></h3>
+    </div>
+
+    <div id="h2div">
+    <h2 id="h2_1">7의 배수중 짝수</h2>
+    <h2 id="h2_2"></h2>
+    </div>
+
+    <div id="h1div">
+    <h1 id="h1">시계(버튼 클릭하면 동작)</h1>
+    </div>
+    <script>
+        var n = 0
+        var a = 0
+        var sum = 0
+        var h3_1 = document.getElementById('h3_1')
+        var h2_1 = document.getElementById('h2_1')
+        var h1 = document.getElementById('h1')
+        $(function(){
+
+            $('#h3div').css('background','pink')
+
+
+           for(var i = 1; i<=100; i++) {
+                if(i%7==0) {
+                    n++; // 개수 더해서 출력
+                    sum+=i; // 합 더해서 출력
+                    h3_1.innerHTML+= i+', '
+                }
+           }
+           
+            $('#h3_2').html("<hr>합="+sum)
+            $('#h3_3').html('개수='+n)
+            
+        
+            
+            
+            
+
+           $('#h2div').one('click',function(){
+            h2_1.innerHTML=''
+            $('#h2div').css('background','cyan')
+                
+            for(var i = 1; i<=100; i++) {
+                if((i%7==0) && (i%2==0)) {
+                    a++; // 개수 더해서 출력
+                    sum+=i; // 합 더해서 출력
+                    h2_1.innerHTML+= i + ", ";
+                }
+                
+            }
+           
+            $('#h2_2').html("(1~100사이 7의 배수 짝수 개수)=" + a)
+        
+            
+            
+            
+           })
+    
+
+        
+        $('#bt_1').click(function(){
+            
+            h1.innerHTML = (new Date()).toLocaleString()
+            a = setTimeout(function(){
+                tick()
+            },1000)
+            b = setTimeout(function(){
+                $('#bt_1').click()
+            },1000)
+           $('#h1div').css('background','yellow')
+           
+           
+        })
+        
+
+        $('#bt_2').click(function(){
+            clearTimeout(a)
+            clearTimeout(b)
+            window.open('http://alswo2817.dothome.co.kr/','newWindow','width=350,height=400')
+            
+        })
+
+      
+        
+            
+        
+        
+    })       
+    </script>
+</body>
+</html>

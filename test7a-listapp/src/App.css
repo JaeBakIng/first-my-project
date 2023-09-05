@@ -1,0 +1,10 @@
+.App {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+
+.AppList {
+  height:200px;
+  border:2px solid black;
+}

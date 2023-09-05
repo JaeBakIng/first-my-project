@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>일정간격카운터</title>
+</head>
+<body>
+    <style>
+        h2 {border : 2px solid blue;
+            }
+    </style>
+
+    <h1>일정 시간 간격으로 값 증가시키기</h1>
+
+   
+
+    <script>
+       var addNum = 0;
+       var subNum = 1000;
+
+
+       var auto_1 = setInterval(function(){ //익명함수
+        addNum++;
+        var h2 = document.getElementById('h2')
+        if (addNum%2==0){
+            document.body.style.color='yellow'
+            document.body.style.backgroundColor='black'
+        }
+        else{
+            document.body.style.color='red'
+            document.body.style.backgroundColor='cyan'
+        }
+        h2.innerHTML = 'addNum=' + addNum},1000) // , 치고 시간설정 1000ms = 1s 
+
+
+
+
+
+
+
+       var auto_2 = setInterval(function(){
+        subNum--;
+        var h22 = document.getElementById('h22')
+        if (subNum%3==0) {
+            document.body.style.color='pink'
+            document.body.style.backgroundColor='green'
+        }
+        h22.innerHTML = 'subNum=' +subNum
+       },1000)
+
+
+
+    </script>
+
+        <button onclick="clearInterval(auto_1)">증가 정지</button>
+        
+        <button onclick="clearInterval(auto_2)">감소 정지</button>
+        
+        <center>
+        <h2 id="h2">...</h2>
+        <h2 id="h22" style="border: 2px solid white">...</h2>
+        </center>
+        
+</body>
+</html>

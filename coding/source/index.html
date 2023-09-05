@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="jscode/jquery-3.6.1.min.js"></script>
+  <script>
+    $(function () {
+      $('#lijquery').hide()
+      $('#name').hide()
+      $('#divjava').hide()
+      $('#midexam').hide()
+      $('#fiexam').hide()
+
+      /*바탕색 color 변경*/
+      $('#se_1').change(function () {
+        if ($(this).val() == 'opt1') {
+          $('body').css('background', '#FFD9EC')
+          $('#main').css('background', '#FFD6FD')
+        }
+        else if ($(this).val() == 'opt2') {
+          $('body').css('background', '#B2CCFF')
+          $('#main').css('background', '#D9E5FF')
+        }
+        else if ($(this).val() == 'opt3') {
+          $('body').css('background', '#CEF279')
+          $('#main').css('background', '#BCE067')
+        }
+        else {
+          $('body').css('background', '#D4F4FA')
+          $('#main').css('background', '#C6FFFF')
+        }
+      });
+
+
+      $('#lititle').click(function () {
+        $('#divjava').hide()
+        $('#lijquery').hide()
+        $('#name').hide()
+        $('#midexam').hide()
+        $('#fiexam').hide()
+        $('#maintitle').slideDown(1000)
+
+      });
+
+      $('#liname').click(function () {
+        $('#maintitle').hide()
+        $('#divjava').hide()
+        $('#lijquery').hide()
+        $('#midexam').hide()
+        $('#fiexam').hide()
+        $('#name').show(1000)
+
+      });
+
+
+      $('#lijava').click(function () {
+        $('#maintitle').hide()
+        $('#lijquery').hide()
+        $('#name').hide()
+        $('#midexam').hide()
+        $('#fiexam').hide()
+        $('#divjava').show(1000)
+
+
+      });
+
+      $('#1jquery').click(function () {
+        $('#maintitle').hide()
+        $('#divjava').hide()
+        $('#name').hide()
+        $('#midexam').hide()
+        $('#fiexam').hide()
+        $('#lijquery').show(1000)
+
+      });
+
+      $('#liexam').click(function () {
+        $('#maintitle').hide()
+        $('#divjava').hide()
+        $('#name').hide()
+        $('#lijquery').hide()
+        $('#fiexam').hide()
+        $('#midexam').show(1000)
+
+      })
+
+      $('#lifiexam').click(function () {
+        $('#maintitle').hide()
+        $('#divjava').hide()
+        $('#name').hide()
+        $('#lijquery').hide()
+        $('#midexam').hide()
+        $('#fiexam').show(1000)
+      })
+    })
+
+  </script>
+
+  <title>박민재의 홈페이지</title>
+  <style>
+    #maintitle {
+      width: 800px;
+      margin: 0 auto;
+    }
+
+    #main-menu>li>a {
+      background-color: rgba(0, 255, 255, 0.692);
+      font-size: 0.85rem;
+      color: black;
+      margin: 0 auto;
+      text-decoration: none;
+      letter-spacing: 0.05em;
+      display: block;
+      padding: 14px 36px;
+      border-right: 1px solid rgba(0, 0, 0, 0.15);
+      text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+      border-radius: 2%;
+
+    }
+
+    #main-menu> :hover {
+      background-color: black;
+    }
+
+
+
+    #main-menu {
+      list-style-type: none;
+    }
+
+
+    #main-menu>li {
+      float: left;
+      border: solid 1px darkcyan;
+    }
+
+    .wapper {
+      width: 1500px;
+      margin: 0 auto;
+    }
+
+    #header {
+      display: block;
+    }
+
+
+
+    #sidemenu {
+      display: block;
+    }
+
+    #main {
+      display: block;
+      width: 850px;
+      height: 1550px;
+      background-color: #C6FFFF;
+      float: left;
+      margin-left: 30px;
+      border: solid 2px darkcyan;
+      border-radius: 1%;
+    }
+
+    ol {
+      text-shadow: 5px 5px 5px lightgray;
+    }
+
+    ol:hover {
+      text-shadow: 5px 5px 5px #f00;
+    }
+
+    ol a:link,
+    a:visited {
+      color: black;
+      text-decoration: none;
+    }
+
+    #swh {
+      text-shadow: 5px 5px 5px lightgray;
+      text-decoration: none;
+    }
+
+    #swh:hover {
+      text-shadow: 5px 5px 5px #f00;
+    }
+
+    #swh a:link,
+    a:visited {
+      color: black;
+    }
+
+    #rightmenu {
+      display: block;
+      float: right;
+      margin: 20px;
+    }
+
+    .myname {
+      border: 3px solid lightblue;
+    }
+
+    .transb {
+      animation-name: change;
+      animation-duration: 3s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+      font-family: monospace;
+    }
+
+
+
+
+    @keyframes change {
+
+      from {
+        color: blue;
+      }
+
+      50% {
+        color: white;
+      }
+
+      to {
+        color: black;
+      }
+
+    }
+  </style>
+  <div>
+    <div style="float:left;">
+      <b>바탕색 변경 --></b>
+      <b>
+        <select name="se_1" id="se_1">
+          <option value="opt0" selected="">Select</option>
+          <option value="opt1">Pink</option>
+          <option value="opt2">Sky</option>
+          <option value="opt3">Grass</option>
+        </select>
+      </b>
+    </div>
+
+
+    <div style="float:right;">
+
+      <b>
+        <a href="https://enter.yc.ac.kr/iphak/web/main/mainPage.do" id="swh" target="_blank">연암공대 홈페이지/</a>
+      </b>
+
+      <b>
+        <a href="https://www.naver.com/" id="swh" target="_blank">네이버/</a>
+      </b>
+
+      <b>
+        <a href="https://www.youtube.com/" id="swh" target="_blank">유튜브</a>
+      </b>
+    </div>
+  </div>
+
+</head>
+
+<body style="background-color: #D4F4FA;">
+
+
+
+  <div class="wapper">
+    <div id="header">
+      <p style="text-align:center; font-size:35px;">
+        <b class="transb">박민재의 홈페이지</b>
+      </p>
+    </div>
+
+
+
+    <!-- 사이드 -->
+    <div width="700px" style="margin-left:20px; float:left">
+
+
+
+      <!--오른쪽 매뉴-->
+
+      <div id="rightmenu">
+
+        <div class="myname">
+          <table>
+            <tbody>
+              <tr>
+                <th>이름 :</th>
+                <td>박민재</td>
+              </tr>
+
+              <tr>
+                <th>학과 :</th>
+                <td>스마트소프트웨어학과</td>
+              </tr>
+
+              <tr>
+                <th>반 :</th>
+                <td>1C반</td>
+              </tr>
+            </tbody>
+
+          </table>
+        </div>
+
+      </div>
+
+
+      <div id="sidemenu" style="float:left">
+
+
+        <audio controls src="Russ-01-Psycho,Pt.2.mp3">
+
+        </audio>
+
+      </div>
+
+      <!--메뉴 바 -->
+      <div id="main">
+
+        <form>
+
+          <ul id="main-menu">
+            <li><a href="#" id="lititle">Title</a></li>
+            <li><a href="#" id="liname">Myname</a></li>
+            <li><a href="#" id="lijava">JavaScript</a></li>
+            <li><a href="#" id="1jquery">Jquery</a></li>
+            <li><a href="#" id="liexam">Mid exam</a></li>
+            <li><a href="#" id="lifiexam">Final exam</a></li>
+          </ul>
+
+        </form>
+        <!--메뉴 바 -->
+
+        <br>
+        <br>
+        <br>
+
+
+        <div id="maintitle">
+          <h2>Title</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos fugiat dolor velit, voluptatum vel enim
+            consectetur eligendi molestias quaerat magnam voluptatibus corrupti eos quae praesentium voluptate tempora,
+            provident voluptatem voluptates tenetur odio perspiciatis quisquam eum? Consequuntur quaerat earum natus
+            minima soluta non quam temporibus beatae, explicabo repudiandae nihil? Eaque obcaecati, nisi laudantium rem
+            consectetur eos quas. A quaerat libero ipsam, dolor quas rem est suscipit nemo accusamus corrupti, quisquam
+            ex tenetur sed. Voluptas, veniam veritatis aperiam quos, optio quo nihil, iusto inventore illum porro quae
+            id. Similique reiciendis dolorem debitis quia dignissimos ea fugit aut! Saepe vel accusantium et adipisci!
+            Soluta reprehenderit quidem odio vel a labore officiis quisquam libero ipsum. Nobis, natus voluptatum
+            consequatur officia ipsa tempora aut veritatis cumque aperiam beatae velit! Non veniam aliquid at aut iste
+            odit error, omnis rerum commodi odio voluptas, ex sunt, tempore laborum natus aspernatur unde autem enim
+            nesciunt suscipit dolorum. Fugiat expedita eos saepe sapiente, recusandae distinctio placeat corporis,
+            pariatur id dolorum libero asperiores illum laborum obcaecati ad quia ullam non porro magni accusamus est
+            nulla soluta magnam! Quae obcaecati autem officiis. Natus minima ab, accusamus a quia in, praesentium vel
+            eligendi ratione, esse et sit commodi! Quis id magnam vero!
+            atus aspernatur unde autem enim nesciunt suscipit dolorum. Fugiat expedita eos saepe sapiente, recusandae
+            distinctio placeat corporis, pariatur id dolorum libero asperiores illum laborum obcaecati ad quia ullam non
+            porro magni accusamus est nulla soluta magnam! Quae obcaecati autem officiis. Natus minima ab, accusamus a
+            quia in, praesentium vel eligendi ratione, esse et sit commodi! Quis id magnam vero!</p>
+
+        </div>
+
+        <!--자기소개 -->
+        <div id="name">
+          <b>
+            <details>
+              <summary>자기소개 <-- 클릭하세요</summary>
+                  <strong style="color:purple;">이름 </strong> : 박민재
+                  <h2 style="color:blue;">처음만드는 홈페이지 입니다</h2>
+                  <p>안녕하십니까 교수님 저는 <span style="color:yellow; background-color:red;">박민재</span> 라고합니다</p>
+                  <p>처음 만드는 홈페이지인만큼 미숙한점 양해부탁드립니다.</p>
+                  우선 저의 <strong>장점</strong>을 나열해보겠습니다
+                  <hr>
+                  <pre>
+  <span style="color:pink;">첫번째</span>:저는 일단 매사에 <span style="color:red;">활발</span>하고 <span style="color:red">긍정</span>적입니다
+  
+  <span style="color:pink;">두번째</span>:<span style="color:blue;">사교성</span>이 좋으며 <span style="color:blue;">끼</span>가많고 항상 <span style="color:blue;">밝은</span>모습을 유지합니다.
+  
+  <span style="color:pink;">세번째</span>:남을 험담하지않고 확실치않은 소문에대하여 항상 중립적인 위치를 지키려고하는 편인거 같습니다.
+  </pre>
+                  <hr>
+                  <p> 저의 좌우명은 <span style="color:green; background-color:blue;">역지사지</span> 입니다 <q>다른사람의
+                      처지에서 생각하라</q> 라는 사자성어 입니다.
+                    <br>어렸을때부터 부모님께서 항상<q>남을먼저 생각하는 습관을 가져라</q>라고 하셔서 <span
+                      style="color:green; background-color:blue;">역지사지</span>라는 좌우명을 항상 기억하며 삽니다.
+
+                  <p><span style="color:white; background-color:black;">비록 미숙하지만 저의 자기소개 홈페이지를 봐주셔서
+                      감사합니다.</span></p>
+            </details>
+        </div>
+        <!--자기소개 -->
+
+
+
+
+
+
+        <!--script list-->
+        <div id="divjava">
+          <ul><b>
+              <li>
+                <h4>Javascript 리포트</h4>
+              </li>
+
+
+              <hr>
+
+
+
+
+
+              <li>1주차수업
+                <ol><a href="http://alswo2817.dothome.co.kr/ex1_2.html" target="_blank">1.document.write</a></ol>
+                <ol><a href="http://alswo2817.dothome.co.kr/ex1_3prompt.html" target="_blank">2.prompt함수</a></ol>
+                <ol><a href="http://alswo2817.dothome.co.kr/ex1_3src.html" target="_blank">3.외부스크립트 연동</a></ol>
+              </li>
+              <hr>
+
+
+              <li>2주차수업
+                <ol><a href="http://alswo2817.dothome.co.kr/ex2_1numvar.html" target="_blank">1.변수선언하기</a></ol>
+                <ol><a href="http://alswo2817.dothome.co.kr/ex2_2홀수짝수.html" target="_blank">2.홀수짝수</a></ol>
+                <ol><a href="http://alswo2817.dothome.co.kr/ex2_3비교연산.html" target="_blank">3.비교연산자</a></ol>
+                <ol><a href="http://alswo2817.dothome.co.kr/ex2_4삼항연산.html" target="_blank">4.삼항연산자</a></ol>
+                <ol><a href="http://alswo2817.dothome.co.kr/ex2_5if문.html" target="_blank">5.if문</a></ol>
+                <ol><a href="http://alswo2817.dothome.co.kr/ex2_6버튼.html" target="_blank">6.버튼카운터</a></ol>
+              </li>
+
+              <hr>
+              <li>3주차 수업
+                <ol><a href="http://alswo2817.dothome.co.kr/ex3_1외부자바버튼태그.html" target="_blank">1.외부자바스크립트 버튼카운터</a>
+                </ol>
+                <ol><a href="http://alswo2817.dothome.co.kr/ex3_2중첩if문로그인.html" target="_blank">2.중첩 if문 로그인하기</a></ol>
+              </li>
+              <hr>
+
+
+              <li>4주차수업
+                <ol><a href="http://alswo2817.dothome.co.kr/ex4_1getElements.html" target="_blank">1.getElement태그 활용</a>
+                </ol>
+                <ol><a href="http://alswo2817.dothome.co.kr/ex4_2예제1.html" target="_blank">2.getElement태그 예제1</a></ol>
+              </li>
+
+              <hr>
+
+              <li>5주차수업
+                <ol><a href="http://alswo2817.dothome.co.kr/ex5_1Switch선택문.html" target="_blank">1.Switch 태그 활용</a></ol>
+                <ol><a href="http://alswo2817.dothome.co.kr/ex5_2.Switch문예제.html" target="_blank">2.Switch 태그 예제</a>
+                </ol>
+                <ol><a href="http://alswo2817.dothome.co.kr/ex5_3for문.html" target="_blank">3.for문 활용</a></ol>
+                <ol><a href="http://alswo2817.dothome.co.kr/ex5_4for문prompt.html" target="_blank">4.for문 활용 prompt</a>
+                </ol>
+              </li>
+
+
+              <hr>
+
+              <li>6주차수업
+                <ol><a href="http://alswo2817.dothome.co.kr/ex6_1factorial.html" target="_blank">1.n!예제</a></ol>
+                <ol><a href="http://alswo2817.dothome.co.kr/ex6_2whileFactorial.html" target="_blank">2.while문을 이용한
+                    n!예제</a></ol>
+                <ol><a href="http://alswo2817.dothome.co.kr/ex6_3script1.html" target="_blank">3.script 위치 활용</a></ol>
+                <ol><a href="http://alswo2817.dothome.co.kr/ex6_4중첩for구구단.html" target="_blank">4.중첩for구구단</a></ol>
+                <ol><a href="http://alswo2817.dothome.co.kr/ex6_5객체.html" target="_blank">5.객체 object</a></ol>
+                <ol><a href="http://alswo2817.dothome.co.kr/ex6_6ob1New.html" target="_blank">6.object 익명함수 호출</a></ol>
+              </li>
+
+              <hr>
+
+              <li>7주차 수업
+                <ol><a href="http://alswo2817.dothome.co.kr/ex7_1newdate.html" target="_blank">1.날짜 객체 예제</a></ol>
+                <ol><a href="http://alswo2817.dothome.co.kr/ex7_2math객체.html" target="_blank">2.math객체 활용 예제</a></ol>
+                <ol><a href="http://alswo2817.dothome.co.kr/ex7_3Math로또.html" target="_blank">3.math함수 로또 구현</a></ol>
+                <ol><a href="http://alswo2817.dothome.co.kr/ex7_4배열객체.html" target="_blank">4.배열객체 예제</a></ol>
+                <ol><a href="http://alswo2817.dothome.co.kr/ex7_5윈도우open.html" target="_blank">5.자기 홈페이지 열기</a></ol>
+                <ol><a href="http://alswo2817.dothome.co.kr/ex7_6시간간격실행.html" target="_blank">6.시간간격 실행</a></ol>
+                <ol><a href="http://alswo2817.dothome.co.kr/ex7_7setTimer.html" target="_blank">7.SetTimeout 현재시각</a>
+                </ol>
+                <ol><a href="http://alswo2817.dothome.co.kr/ex7_8배열array.html" target="_blank">8.배열객체 메서드&속성</a></ol>
+              </li>
+              <hr>
+              <li>8주차 수업
+                <ol><a href="http://alswo2817.dothome.co.kr/ex8_1arguments.html" target="_blank">1.함수 arguments</a></ol>
+                <ol><a href="http://alswo2817.dothome.co.kr/ex8_2avgreturn.html" target="_blank">2.함수 return 속성</a></ol>
+                <ol><a href="http://alswo2817.dothome.co.kr/ex8_4재귀fn.html" target="_blank">3.재귀 함수의 function</a></ol>
+                <ol><a href="http://alswo2817.dothome.co.kr/ex8_5전역지역변수.html" target="_blank">4.전역 지역변수의 차이</a></ol>
+                <ol><a href="http://alswo2817.dothome.co.kr/ex8_6증감함수.html" target="_blank">5.증감함수</a></ol>
+                <ol><a href="http://alswo2817.dothome.co.kr/ex8_7익명함수.html" target="_blank">6.익명함수</a></ol>
+                <ol><a href="http://alswo2817.dothome.co.kr/ex8_8객체생성함수.html" target="_blank">7.객체생성함수</a></ol>
+                <ol><a href="http://alswo2817.dothome.co.kr/ex8_9객체함수prototype.html"
+                    target="_blank">8.객체생성함수(Prototype)</a></ol>
+              </li>
+
+
+              <hr>
+
+
+              <li>9주차 수업
+                <ol><a href="http://alswo2817.dothome.co.kr/ex9_1hoisting시험!!!.html" target="_blank">1.hoisting의 개념</a>
+                </ol>
+              </li>
+          </ul>
+        </div>
+        <!--script list-->
+
+
+
+        <!--jquery list-->
+        <div id="lijquery">
+          <ul><b>
+              <li>
+                <h4>Jquery 리포트</h4>
+              </li>
+
+
+              <hr>
+
+
+
+
+
+              <li>10주차수업
+                <ol><a href="http://alswo2817.dothome.co.kr/ex10_1jquery.html" target="_blank">1.jquery기초</a></ol>
+                <ol><a href="http://alswo2817.dothome.co.kr/ex10_2_1jquery.html" target="_blank">2.jquery기초2</a></ol>
+                <ol><a href="http://alswo2817.dothome.co.kr/ex10_2jquery2.html" target="_blank">3.jquery기초3</a></ol>
+                <ol><a href="http://alswo2817.dothome.co.kr/ex10_4jquery3.html" target="_blank">4.jquery기초4</a></ol>
+                <ol><a href="http://alswo2817.dothome.co.kr/ex10_3letvar.html" target="_blank">5.let변수와 var 변수의 차이</a>
+                </ol>
+                <ol><a href="http://alswo2817.dothome.co.kr/ex10_5div마우스.html" target="_blank">6.on메소드 마우스**</a></ol>
+                <ol><a href="http://alswo2817.dothome.co.kr/ex10_6show_hide.html" target="_blank">7.show_hide메소드**</a>
+                </ol>
+                <ol><a href="http://alswo2817.dothome.co.kr/ex10_7header버튼.html" target="_blank">8.click메소드****</a></ol>
+              </li>
+
+              <hr>
+
+              <li>11주차수업
+                <ol><a href="http://alswo2817.dothome.co.kr/ex11_1each메소드.html" target="_blank">1.each메소드***</a></ol>
+                <ol><a href="http://alswo2817.dothome.co.kr/ex11_2each배열메소드.html" target="_blank">2.each배열메소드***</a>
+                </ol>
+                <ol><a href="http://alswo2817.dothome.co.kr/ex11_3each메소드3.html" target="_blank">3.each메소드3***</a></ol>
+                <ol><a href="http://alswo2817.dothome.co.kr/ex11_4filter.html" target="_blank">4.filter메소드****</a></ol>
+                <ol><a href="http://alswo2817.dothome.co.kr/ex11_5filter2.html" target="_blank">5.filter메소드2****</a>
+                </ol>
+                <ol><a href="http://alswo2817.dothome.co.kr/ex11_6showhide.html" target="_blank">6.showhide메소드***</a>
+                </ol>
+                <ol><a href="http://alswo2817.dothome.co.kr/ex11_7is메소드.html" target="_blank">7.is메소드***</a></ol>
+              </li>
+              <hr>
+
+              <li>12주차 수업
+                <ol><a href="http://alswo2817.dothome.co.kr/ex12_1findfilter중요.html"
+                    target="_blank">1.find_filter중요*****</a></ol>
+                <ol><a href="http://alswo2817.dothome.co.kr/ex12_2getjoin.html" target="_blank">2.get,join메소드**</a></ol>
+              </li>
+
+              <hr>
+
+              <li>13주차수업
+                <ol><a href="http://alswo2817.dothome.co.kr/ex13_1jq_find.html" target="_blank">1.jq_find***</a></ol>
+                <ol><a href="http://alswo2817.dothome.co.kr/ex13_2jq_classmt.html" target="_blank">2.class 메소드****</a>
+                </ol>
+                <ol><a href="http://alswo2817.dothome.co.kr/ex13_3prop메소드.html" target="_blank">3.prop메소드</a></ol>
+                <ol><a href="http://alswo2817.dothome.co.kr/ex13_4propcheckbox시험낼거임.html" target="_blank">4.prop메소드 체크박스
+                    시험낼거임!*******!</a></ol>
+              </li>
+
+              <li>14주차수업
+                <ol><a href="http://alswo2817.dothome.co.kr/ex14_1수치조작메서드시험.html" target="_blank">1.수치조작 method</a></ol>
+                <ol><a href="http://alswo2817.dothome.co.kr/ex14_2append.html" target="_blank">2.append_1</a></ol>
+                <ol><a href="http://alswo2817.dothome.co.kr/ex14_3append2.html" target="_blank">3.append_2</a></ol>
+                <ol><a href="http://alswo2817.dothome.co.kr/ex14_4객체조작및생성.html" target="_blank">4.객체조작및 생성</a></ol>
+                <ol><a href="http://alswo2817.dothome.co.kr/ex14_5event시험.html" target="_blank">5. event메소드 시험***</a>
+                </ol>
+                <ol><a href="http://alswo2817.dothome.co.kr/ex14_6event2.html" target="_blank">5_1.event2</a></ol>
+                <ol><a href="http://alswo2817.dothome.co.kr/ex14_7event3.html" target="_blank">5_2.event3</a></ol>
+                <ol><a href="http://alswo2817.dothome.co.kr/ex14_8eventmousemv.html" target="_blank">6.eventmousemv</a>
+                </ol>
+                <ol><a href="http://alswo2817.dothome.co.kr/ex14_9eventfocusblur.html"
+                    target="_blank">7.eventfocusblur</a></ol>
+              </li>
+              <hr>
+
+              <li>15주차 수업
+                <ol><a href="http://alswo2817.dothome.co.kr/ex15_1bind이벤트.html" target="_blank">1.bind이벤트</a></ol>
+                <ol><a href="http://alswo2817.dothome.co.kr/ex15_2bind이벤트2시험.html" target="_blank">1_1.bind이벤트2</a></ol>
+                <ol><a href="http://alswo2817.dothome.co.kr/ex15_3에니메이션.html" target="_blank">2.에니메이션</a></ol>
+                <ol><a href="http://alswo2817.dothome.co.kr/ex15_4clickshowhide.html"
+                    target="_blank">3.clickshowhide</a></ol>
+              </li>
+
+
+
+
+
+            </b>
+          </ul>
+        </div>
+        <!--jquery list-->
+
+        <!--midexam list-->
+        <div id="midexam">
+          <ul>
+            <li>
+              <h4>중간고사</h4>
+            </li>
+          <hr>
+            <li>시험 과제
+              <ol><a href="http://alswo2817.dothome.co.kr/mid1.html" target="_blank">1.mid1.html</a></ol>
+              <ol><a href="http://alswo2817.dothome.co.kr/mid2.html" target="_blank">2.mid2.html</a></ol>
+              <ol><a href="http://alswo2817.dothome.co.kr/mid3.html" target="_blank">3.mid3.html</a></ol>
+            </li>
+          </ul>
+        </div>
+        <!--midexam list-->
+
+        <div id="fiexam">
+          <ul>
+            <li>
+              <h4>기말고사</h4>
+            </li>
+          <hr>
+            <li>시험 과제
+              <ol><a href="http://alswo2817.dothome.co.kr/finalex.html" target="_blank">1.finalex1.html</a></ol>
+              <ol><a href="http://alswo2817.dothome.co.kr/finalex2.html" target="_blank">2.finalex2.html</a></ol>
+              
+            </li>
+          </ul>
+        </div>
+
+
+      </div>
+    </div>
+
+
+
+  </div>
+
+
+  </div>
+  </div>
+
+
+
+
+
+</body>
+
+</html>

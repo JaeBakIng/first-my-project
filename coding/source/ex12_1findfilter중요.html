@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jscode/jquery-3.6.1.min.js"></script>
+    <script>
+        $(function () {
+            $('li').filter(':odd').css('background', 'yellow').end().filter(':has(span)'). //end는 바로앞에 껄로 적용하는 의미 (odd가 적용안댐) li 에서 span 태그의 테두리를 3px의 파란색으로 해라
+                css('border', '3px solid blue')
+            $('#li3').css('font', '30px 궁서체')
+
+        });
+    </script>
+</head>
+
+<body>
+    <ul id="list1">
+        <li>리스트0</li>
+        <li><span>리스트1</span></li>
+        <li><span>리스트2</span></li>
+        <li id="li3">리스트3</li>
+        <li>리스트4</li>
+        <li>리스트<span>5</span></li>
+        <li>리스트6</li>
+    </ul>
+</body>
+
+</html>

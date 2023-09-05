@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>예제1</title>
+    <style>
+        p {
+            border:2px dotted red
+
+        }
+
+
+    </style>
+</head>
+<body>
+    <p id="pp">변경전 p태그</p>
+    <button id="bt1" onclick='ff1()'>click here!!</button>
+
+    <script>
+        var cnt=0;
+        var pp=document.getElementById('pp')
+        var bt1=document.querySelector('#bt1') // 시험나올수도있음 #이니까 querySelector
+        function ff1() {  //onclick 했을때 함수호출
+            cnt++;
+            document.title=cnt+'번클릭됨!'
+            pp.innerHTML="<h2>" + cnt+"번클릭됨</h2>"
+
+            if(cnt%2==0){
+                pp.style.backgroundColor='pink'
+                bt1.style.backgroundColor='yellow'
+                document.body.style.backgroundColor='cyan'
+            
+            }
+            else{
+                pp.style.backgroundColor='cyan'
+                bt1.style.backgroundColor='green'
+                document.body.style.backgroundColor='blue'
+               
+            }
+
+        }
+        
+        
+    </script>
+</body>
+</html>

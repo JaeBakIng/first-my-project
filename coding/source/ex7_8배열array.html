@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열 array</title>
+</head>
+<body>
+    <script>
+        var A = [1,3,5,7]
+        var B = ['연암','SW',2,4,6,8]
+        var C = A.concat(B)
+
+        for (var i in C) {
+            document.write(C[i]+' ')
+
+        }
+        
+        document.write('<hr>')
+        for( i=0;i<C.length;i++) {
+            document.write(C[i]+'<br>')
+        }
+        var D=C.slice(4,6)
+        document.write('slice C='+ D +'<br>')
+        document.write(C+'<hr>')
+
+        var E=C.splice(4,2)
+        document.write('splice C='+ E+'<br>')
+        document.write('연암,SW없어짐 C='+C+'<hr>')
+
+        C.push('연암')
+        document.write('push 연암 C='+C)
+        
+
+        
+    </script>
+</body>
+</html>

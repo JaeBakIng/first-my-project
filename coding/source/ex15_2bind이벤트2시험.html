@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jscode/jquery-3.6.1.min.js"></script>
+    <style>
+        .on1{background:lime;}
+        .on2{background: yellow;}
+    </style>
+    <script>
+        $(function(){
+            $('#bt1.on1').on('mouseover focus',function(){
+                alert('button1') 
+            })
+            $('#bt1').addClass('on1')  //.on1 class 가 add 되기전 함수호출해서 코드실행 X           
+            
+            $(document).on('mouseover focus','#bt2.on2',function(){
+                alert('button2') //document 로 on2 class 먼저 불러와서 써주기때문에 실행됨 (호이스팅 개념)
+            })
+            $('#bt2').addClass('on2')
+        })
+    </script>
+</head>
+<body>
+    <div id="div1">
+        <p><button id="bt1">버튼1</button></p>
+        <p><button id="bt2">버튼2</button></p>
+    </div>
+</body>
+</html>

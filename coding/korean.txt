@@ -1,0 +1,23 @@
+<ul><b>
+            <br>
+            <li>중간고사 시험
+              <ol><a href="http://alswo2817.dothome.co.kr/mid1.html" target="_blank">1.mid1.html</a></ol>
+              <ol><a href="http://alswo2817.dothome.co.kr/mid2.html" target="_blank">2.mid2.html</a></ol>
+              <ol><a href="http://alswo2817.dothome.co.kr/mid3.html" target="_blank">3.mid3.html</a></ol>
+            </li>
+            <hr>
+            <br>
+            <li>과제
+              <ol><a href="http://alswo2817.dothome.co.kr/과제1_1시험성적.html" target="_blank">1.점수에따른 학점매기기</a></ol>
+              <ol><a href="http://alswo2817.dothome.co.kr/ex9_2로또번호시험.html" target="_blank">2.로또번호 예측하기</a></ol>
+              <ol><a href="http://alswo2817.dothome.co.kr/ex8_3return함수.html" target="_blank">3.함수 return속성 img넘기기</a>
+              </ol>
+              <ol><a href="http://alswo2817.dothome.co.kr/ex시험문제라디오.html" target="_blank">4.input 라디오를 활용한 클릭</a></ol>
+            </li>
+            <hr>
+          </b>
+        </ul>
+
+
+
+        

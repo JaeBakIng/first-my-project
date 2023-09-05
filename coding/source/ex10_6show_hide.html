@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .div1{ width:100px;}
+    </style>
+    <script src="jscode/jquery-3.6.1.min.js"></script>
+    <script>
+        $(function(){
+
+            $('#button1').click(function(){
+                $('#p1').show(1000)
+                $('#p1').html('<h1>박민재</h1>')
+                $('body').css('background','pink')
+            })
+
+            $('#button2').click(function(){
+                $('#p1').hide(1000)
+                $('body').css('background','cyan')
+            })
+
+            $('#p1').on({
+                mouseenter:function(){$('body').css('background','red')},
+                mouseleave:function(){$('body').css('background','white')}
+            })
+
+        })
+    </script>
+</head>
+<body>
+    <div class="div1">
+    <p id="p1">id1인 p태그</p>
+    </div>
+    <button id="button1">보인다.</button>
+    <button id="button2">사라짐.</button>
+</body>
+</html>

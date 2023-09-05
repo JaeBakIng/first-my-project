@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>return img 함수 예제</title>
+    <style>
+        galleryZone input[type="image"] {margin:0 8px;
+            
+        }
+    </style>
+    <p>
+        <button onclick="gallery(0)">이전</button> <!--버튼을 클릭하면 gallery 함수에 0 또는 1 값이 들어감 (True or False)-->
+        <button onclick="gallery(1)">다음</button>
+    </p>
+</head>
+<body>
+    <script>
+        var num = 1;
+        function gallery(direct) {
+
+            if (direct){ //True of False 
+                if(num==6) return; // True 일때 direct 값이 1이므로 num 값이 1씩 증가 , num이 6이 되면 return 함수로 num이 증가 못하도록 되돌아감.
+                num++;
+            }
+            else {
+                if(num==1) return;// False 일때 direct 값이 0이므로 num 값이 1씩 감소 , num이 1이되면 return 함수로 num이 증가 못하도록 되돌아감.
+                num--;
+            }
+            var photo = document.getElementById('photo')
+            photo.setAttribute("src","jscode/pic_"+num+".jpg")
+        }
+
+    </script>
+
+<div id="galleryZone">
+    <p><img src="jscode/pic_1.jpg" id="photo" alt=""></p>
+</div>
+</body>
+</html>

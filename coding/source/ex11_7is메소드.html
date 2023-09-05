@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jscode/jquery-3.6.1.min.js"></script>
+    <script>
+        $(function(){
+            $('img').attr('src','jscode/pic_1.jpg')
+            $('#p_1').html('<b>원래그림:'+$('img').attr('src')+'</b>')
+
+
+
+            $('#bt1').click(function(){
+                $('img').css('border','2px solid blue')
+                $('img').attr('src','jscode/pic_2.jpg')
+                $('#p_1').html('<b>지금그림'+$('img').attr('src')+'</b>')
+            });
+
+            $('#bt2').click(function(){
+                $('img').removeAttr('src')
+                $('div p').html('그림삭제...')
+                $('#p_1').html('')
+            });
+        });
+    </script>
+    <button id="bt1">그림변경</button>
+    <button id="bt2">그림제거</button>
+</head>
+<body>
+    <div>
+    <p>그림이다<img></p>
+    </div>
+    <hr>
+    <p id="p_1"></p>
+    <p>next selector 테스트1</p>
+    <p>next selector 테스트2</p>
+    <p>next selector 테스트3</p>
+
+    
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jscode/jquery-3.6.1.min.js"></script>
+    <script>
+        $(function(){
+            var n = 0
+            $('#bt1').click(function(){$('h1').hide(1000,'swing')})
+            $('#bt2').click(function(){$('h1').show('fast')})
+            $('#bt3').click(function(){$('h1').slideUp('normal').css('color','red')})
+            $('#bt4').click(function(){$('h1').slideDown(5000,'linear')})
+            $('#bt5').click(function(){$('h1').fadeOut('slow')})
+            $('#bt6').click(function(){$('h1').fadeIn('slow')})
+            $('#bt7').click(function(){
+                n++
+                if(n%2==1){
+                    $('h1').fadeTo('slow',0.3).css('color','cyan')
+                }
+                else {
+                    $('h1').fadeTo('slow',0.5).css('color','blue')
+                }
+            })
+        });
+    </script>
+</head>
+<body>
+    <button id="bt1">hide</button>
+    <button id="bt2">show</button>
+    <button id="bt3">slide up</button>
+    <button id="bt4">slide down</button>
+    <button id="bt5">fade out</button>
+    <button id="bt6">fade in</button>
+    <button id="bt7">fade to</button>
+    <h1>에니메이션 효과 테스트</h1>
+    <hr>
+</body>
+</html>

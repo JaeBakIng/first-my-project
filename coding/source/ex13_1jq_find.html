@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jscode/jquery-3.6.1.min.js"></script>
+    <script>
+        $(function(){
+            //$('p').find('strong').css('background','yellow');
+            //$('p>strong').css('background','orange');
+            var x = '<hr>YYYYYYYYYYYYYY<hr>'
+            var y = '<hr>****************<br>'
+            //$('strong','p').css('background','red');
+            //$('p','strong').css('background','red');
+            //$('strong,p').css('background','red');
+            //$('strong','div').css('background','cyan');
+            //$('div strong').css('backgrond','violet');
+
+
+
+            //$('p:first').append('<h1>append</h1>'); //뒤에 붙힘
+            //$('p:first').prepend('<h1>append</h1>'); //앞에 붙힘
+            //$(x).appendTo($('p:first')); // x 변수안 내용을 첫번째 p태그 뒤에 같다 붙힘
+
+
+
+            /* A = 'ABCDEFG'  여기는 태그가 없어서 안붙음
+            $(A).appendTo($('p:first'));*/
+
+            //$(y).appendTo($('hr:last'));
+            //$(x).prependTo($('div:first'));
+        });
+    </script>
+</head>
+<body>
+    <p>1st p 안에 <strong>strong 진한</strong> 태그가 있다</p>
+    <p>2st p 안에 <strong>strong 진한</strong> 태그가 있다</p>
+    <div>
+        div(1) 안에 <strong>strong 진한</strong> 태그가 있다 <br>
+        div(2) 안에 <strong>strong 진한</strong> 태그가 있다
+
+    </div>
+    <hr>
+
+</body>
+</html>

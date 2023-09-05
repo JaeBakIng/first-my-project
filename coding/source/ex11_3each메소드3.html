@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jscode/jquery-3.6.1.min.js"></script>
+</head>
+<body>
+    <h3>문단0</h3>
+    <h3>문단1</h3>
+    <h3>문단2</h3>
+    <h3>문단3</h3>
+    <h3>문단4</h3>
+
+    <h2>문단0</h2>
+    <h2>문단1</h2>
+    <h2>문단2</h2>
+    <h2>문단3</h2>
+    <h2>문단4</h2>
+    <script>
+        var arColor = ['yellow','red','green','blue','gray']
+
+        $('h3').each(function(a){
+            $(this).css('background',arColor[a])
+        })
+
+
+       var hi = $('h2');
+       for(var i=0; i<hi.length;i++){
+        hi.eq(i).css('background',arColor[i])
+         .css('width',10*(i+1)+'%')
+       }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jscode/jquery-3.6.1.min.js"></script>
+
+    <script>
+        $(function () {
+            $("#bt1").click(function(e){
+                e.preventDefault(); // href 링크된 기본 이벤트를 차단
+                $('#txt1').css('background','#ff0')
+            });
+
+            $("#bt2").click(function(){
+                $("#txt2").css('background','#0ff')
+            });
+
+            $('#bt3').dblclick(function(){
+                $("#txt3").css('background','lightgreen').css('fontSize','60px')
+                $('body').css('background','orange')
+            })
+        });
+    </script>
+</head>
+
+
+<body>
+    <p><a href="http://www.naver.com/" id="bt1">버튼1 (네이버)</a></p>
+    <p id="txt1">네이버 연결</p>
+
+    <p><a href="https://enter.yc.ac.kr/iphak/web/main/mainPage.do" id="bt2">버튼2 (연암공대)</a></p>
+    <p id="txt2">연암공대</p>
+
+    <p><button id="bt3">버튼3</button></p>
+    <p id="txt3">내용3</p>
+</body>
+
+</html>

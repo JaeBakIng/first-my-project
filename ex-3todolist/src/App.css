@@ -1,0 +1,9 @@
+.App {
+  text-align: center;
+}
+
+.todo-item {
+  border : 2px solid blue;
+  background-color: cyan;
+}
+

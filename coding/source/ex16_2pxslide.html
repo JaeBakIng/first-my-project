@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jscode/jquery-3.6.1.min.js"></script>
+    <script>
+        $(function () {
+            var n = 0
+            var a = 0
+            $('#bt1').click(function () {
+                a++
+                if (a % 2 == 1) {
+                    $('#sp1').animate({
+                        marginLeft: "500px", //왼쪽 margin이 500px 만큼 떨어지니까 이동하는거처럼 보임
+                        fontSize: "30px"
+                    }, 1500, 'linear', function () {
+                        alert('이동함!')
+                        $('body').css('background','gold')
+                    })
+                }
+                else {
+                    $('#sp1').animate({
+                        marginLeft:"",
+                        fontSize:"20px"
+                    },2000,'linear',function(){
+                        alert('다시이동함!')
+                    })
+                }
+            });
+
+            $('#bt2').click(function () {
+                n++
+                $('#sp2').animate({
+                    marginLeft: "+=50px",
+                    fontSize: "+=5px"
+                }, 500, 'linear');
+                document.title = n + '클릭됨'
+            })
+        });
+    </script>
+    <style>
+        #sp1 {
+            background-color: cyan;
+        }
+
+        #sp2 {
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <p><button id="bt1">버튼1</button></p>
+    <span id="sp1">500px 이동</span>
+    <p><button id="bt2">버튼1</button></p>
+    <span id="sp2">50px 이동</span>
+</body>
+
+</html>

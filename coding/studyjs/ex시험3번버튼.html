@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <center>
+    <input onclick="X3(3)" name = "C1" value="ac" type="radio">3의 배수</input>
+    <input onclick="X5(5)" name = "C1" value="ab" type="radio">5의 배수</input>
+    <button onclick="ff1()">현재시간</button>
+    <button onclick="ff2()">현재시간 정지</button>
+    <button onclick="page()">홈페이지</button>
+    </center>
+</head>
+<body>
+    <h2 id="h2">Html</h2>
+    <script>
+        var h2 = document.getElementById('h2')
+        function X3(x) {
+            
+            
+            var n = 0
+            var sum = 0
+            h2.innerHTML = ""
+            if (x=3) {
+                h2.style.backgroundColor="cyan"
+                
+            }
+            for(var i = 1; i<=50; i++) {
+                if(i%3==0) {
+                    n++; // 개수 더해서 출력
+                    sum+=i; // 합 더해서 출력
+                    h2.innerHTML+= i + ", ";
+                }
+            }
+            h2.innerHTML+="<hr>합=" + sum;
+            h2.innerHTML+="<br>개수=" + n;
+            h2.style.border = '3px dotted blue'
+            clearTimeout(a)
+            clearTimeout(b)
+           
+        }
+
+            function X5(x) {
+            
+
+
+            var n = 0
+            var sum = 0
+            h2.innerHTML = ""
+
+            if (x=5) {
+                h2.style.backgroundColor="yellow"
+                
+            }
+            for(var i = 1; i<=50; i++) {
+                if(i%5==0) {
+                    n++; // 개수 더해서 출력
+                    sum+=i; // 합 더해서 출력
+                    h2.innerHTML+= i + ", ";
+                }
+            }
+            h2.innerHTML+="<hr>합=" + sum;
+            h2.innerHTML+="<br>개수=" + n;
+            h2.style.border = '3px dotted blue'
+            clearTimeout(a)
+            clearTimeout(b)
+        }
+    
+
+
+        function ff1() {
+            
+            h2.innerHTML = (new Date()).toLocaleString() //h2를 데이트 객체로써 쓴다
+            a = setTimeout(function(){
+                tick()
+            },1000)
+            b = setTimeout(function(){
+                ff1()
+            },1000)
+           h2.style.backgroundColor = "pink"
+           h2.style.border = '3px dotted blue'
+           
+          
+        }
+
+        function ff2() {
+            clearTimeout(a)
+            clearTimeout(b)
+            
+        }
+
+        function page() {
+            h2.innerHTML = '박민재의 홈페이지'
+            h2.style.backgroundColor="green"
+            h2.style.border = '3px dotted blue'
+            window.open('http://alswo2817.dothome.co.kr/','newWindow','width=350,height=400')
+            clearTimeout(a)
+            clearTimeout(b)
+            
+            
+        }
+        
+        
+    </script>
+</body>
+</html>

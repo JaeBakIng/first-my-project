@@ -1,0 +1,6 @@
+print('islower abcd>', 'abcd'.islower())
+print('isupper abcd>', 'abcd'.isupper())
+print('isalpha abcABC>', 'abcABC'.isalpha())
+print('isdigit 123>', '123'.isdigit())
+print('isalnum abc123!>', 'abc123!'.isalnum())
+print('isspace >', ' '.isspace())

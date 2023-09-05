@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열 객체</title>
+</head>
+<body>
+    <script>
+        var X =[60,'스마트소프트웨어학과',true]
+        document.write('<h3>배열값 가져오기 1</h3>')
+        for (var i=0; i<X.length; i++) {
+            document.write(X[i]+'<br>') // typeof(X) --> object*** 중요!
+                }
+        document.write('<hr>')
+        document.write('<h3>배열값 가져오기 2 (in)</h3>')
+        document.write('X의 요소수= ' + X.length +'<br>')
+        for (i in X) { // in 시험 나올수도 있슴
+            document.write(X[i],'<br>')
+        }
+    </script>
+</body>
+</html>

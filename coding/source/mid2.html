@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로또번호</title>
+    <script src ="jscode/jquery-3.6.1.min.js"></script>
+    <style>
+    .ball { display:inline-block;
+            width:80px; height:80px;
+            background-color: yellow;
+            border-radius: 50%;
+            line-height:80px;
+            font-size:50px;
+            margin:5px;
+            text-align:center;
+         }
+ 
+
+        
+    </style>
+    
+    <br>
+</head>
+<body>
+    <script>
+        var a = 0
+        var sum = 0
+
+        while (true) {
+        a++
+        var list=[];
+        for(var i=1; i<=45; i++) { //1부터 45까지 숫자를 넣음
+            list.push(i);
+        }
+        var result=[]
+        
+        for (var i=0; i<6; i++) { // 배열값이라 0부터 시작
+            var index = Math.floor(Math.random()*list.length); // 1~45까지 난수를 생성 하여 첫쨰자리에서 내림 
+            var num = list[index]; // list안에 list의 index길이만큼 random 함수로 숫자하나 저장 (6번반복)
+
+
+            list.splice(index,1) // 1~45 랜덤하여 나온 값중 하나를 splice함
+            result.push(num); // splice한 값을 result배열에 넣어줌
+        }
+        result.sort(function(a,b) {return a-b;}); //  a-b 오름차순
+        for (var i=0; i<6; i++) {
+            document.write('<b class="ball">' + result[i] + '</b>')
+        }
+        document.write('<br>')
+    
+        $(result).each(function(index,value){
+            sum += value;
+        })
+
+        if (result[5] == 40) {
+            break;
+        }
+    }
+    
+    
+
+        
+
+    
+    
+    document.write('<hr>')
+    document.write(a+'번 실행됨'+'<br>')
+    document.write(sum +'합')
+
+
+    
+       
+     
+
+       
+        
+
+</script>
+</body>
+</html>

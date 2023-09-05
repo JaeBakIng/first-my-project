@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for 반복문</title>
+</head>
+<body>
+    <script>
+
+        document.body.style.backgroundColor='cyan'
+        document.body.style.color='red'
+        var sum1=0
+        var sum2=0
+        
+
+
+
+        for (var i=1; i<=100; i++ ) {
+            if(i%2==0) {
+                sum1 += i
+            }
+            
+            else {
+                sum2 += i
+
+            }
+           
+        }
+        document.write('짝수' + sum1 + '<br>')
+        document.write('홀수' + sum2 + '<hr>')
+
+
+        
+        var sum3=0
+        var n = 0 // 갯수 초기화
+        for (var i=1; i<=100; i++ ) {
+            if(i%3==0) { //3의배수
+                sum3 += i
+                document.write(i +', ')
+                n++
+            }
+        }
+            document.write('<br> 3의배수'+sum3)
+            document.write('<br>3의배수의 갯수='+ n + '<hr>')
+
+
+        var ss = 0
+        var sss = 0
+        for (var i=100; i<=200; i++) {
+            if ((i%5==0) && (i%7==0)){
+                ss += i
+                sss++
+                document.write(i +', ') 
+
+            }
+        }
+        document.write('<br>5와7의 배수의 합='+ss)
+        document.write('<br>5와7의 배수의 갯수='+sss)
+    </script>
+</body>
+</html>

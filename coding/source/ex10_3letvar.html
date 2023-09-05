@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>변수 적용범위</title>
+</head>
+<body>
+    <p>F12를 눌러 콘솔을 확인하세요</p>
+    <script>
+        let x = 100;
+        for (let x=1; x<=4; x++) {
+            console.log('let 사용=',x)
+        }
+        console.log(x)
+        console.log('----------------------')
+
+        var a = 100;
+        for (let a=1; a<=4; a++) {
+            console.log('var 사용=',a)
+        }
+        console.log(a)
+
+    </script>
+</body>
+</html>

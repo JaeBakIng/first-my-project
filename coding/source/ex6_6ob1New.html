@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object 익명함수 호출</title>
+</head>
+<body>
+   <script>
+
+    var tv = new Object(); // 시험 낼수도...
+    tv.color = 'white';
+    tv.price = 300000;
+    tv.info = function (){ // 함수 info 뒤에는 function으로 함
+        document.write('tv 색상: ' + this.color, '<br>') //this 객체 : 자신의객체를 부를떄 씀
+        document.write('tv 가격: ' + this.price, '<br>') 
+    }
+
+    var car = {
+        color:"black",
+        price:5000000,
+        info:function() {
+            document.write('car 색상:'+ this.color,'<br>')
+            document.write('car 가격:'+ this.price,'<br>')
+        }
+    }
+
+    document.write('<h1>tv 객체 메서드 호출</h1>')
+    tv.info(); //tv.info 함수 를 호출함
+    document.write('<h1>car 객체 메서드 호출</h1>')
+    car.info(); //car.info함수를 호출함
+       </script> 
+</body>
+</html>

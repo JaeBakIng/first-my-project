@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jscode/jquery-3.6.1.min.js"></script>
+</head>
+
+<body>
+    <script>
+        var A = []
+        var sum = 0
+
+        var sum1 = 0
+        var sum2 = 0
+        var sum3 = 0
+        for (var i = 1; i <= 100; i++) {
+            A.push(i);
+        }
+
+        for (a = 1; a <= 100; a++) {
+            sum += a
+        }
+        console.log('A=' + A)
+        console.log('배열 A의 갯수 = 100')
+        console.log('A요소의 합=' + sum)
+
+       
+        $(function () {
+
+            $('#bt1').click(function () {
+
+                A.filter(function (value) {
+                    if (value % 2 == 0) {
+                        sum1 += value
+                    }
+                })
+
+                A.filter(function (val) {
+                    if (val % 2 == 1) {
+                        sum2 += val
+                    }
+                })
+
+                A.filter(function (val2) {
+                    if (val2 % 5 == 0) {
+                        sum3 += val2
+                    }
+                })
+
+                $('title').text('기말실기1번')
+
+                
+
+
+                $('body').css('background', 'cyan')
+
+                $('#sum1').html('<p> A 홀수 요소의 합='+sum1+'</p><hr>')
+
+                $('#sum2').html('<p> A 짝수 요소의 합='+sum2+'</p><hr>')
+
+                $('#sum3').html('<p> 5의 배수의 합='+sum3+'</p>')
+
+               
+
+
+            })
+            
+            })
+
+         
+        
+
+
+    </script>
+    <button id="bt1">완료!</button>
+    <p id="sum1"></p>
+    <p id="sum2"></p>
+    <p id="sum3"></p>
+
+</body>
+
+</html>

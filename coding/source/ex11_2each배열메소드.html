@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jscode/jquery-3.6.1.min.js"></script>
+</head>
+<body>
+    <p id="p1">배열 표시</p>
+    <p id="p2">배열 계산</p>
+    <script>
+        var arr=[1,2,3,4,5,6,7,8,9,10,15]
+        $('#p1').append('<br>'+arr) //줄바꾸고 arr 배열 같다 붙힘
+
+        var sum = 0
+        var jqsum = 0
+
+        arr.forEach(function(value,index){ //(배열안 요소,인덱스값)
+            sum+=value
+        }) // javascript의 예 value가 먼저오고 index가 옴 ***parameter
+        document.getElementById('p2').textContent='합(js)='+sum
+
+        $(arr).each(function(index,value){//(인덱스값, 배열안 요소)
+            jqsum +=this // this --> arr 배열의 요소들
+        }) // jquery의 예 index가 먼저오고 value가옴 ***this 시험 중요!
+        $('#p2').append('<hr>합(jq)='+jqsum)
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>버튼문</title>
+    <style>
+        button{
+            background-color: cyan;
+        }
+    </style>
+</head>
+<body>
+   
+    <button onclick="ff1()"> 버튼 클릭</button> <!--ff1는 함수를 호출함-->
+    <button onclick="ff2()"> 초기화</button>
+    <p id="bt1_1">카운터</p>
+    <script>
+        var cnt=0 //카운터 초기화
+        var bt1=document.getElementById('bt1_1') //중요! id의 요소를 가져온다
+        function ff1() {
+            cnt++; 
+            bt1.innerHTML = "cnt=" + cnt +"번클릭됨"; //bt1이라는 document를 html로써 사용함
+            if(cnt%2==1){
+                bt1.style.backgroundColor="cyan"
+            }
+            else{
+                bt1.style.backgroundColor="red"
+            }
+        }
+        function ff2() {
+            cnt=0;
+            bt1.innerHTML="cnt=" + cnt + "으로 초기화 되었음..";
+            bt1.style.backgroundColor="pink"
+        }
+            
+        
+
+    </script>
+</body>
+</html>

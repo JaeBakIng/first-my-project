@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jscode/jquery-3.6.1.min.js"></script>
+    <script>
+        var n = -1
+        $(function() {  //$는 제이쿼리 표시방법
+            $('#ul').css('color','red')
+
+
+            $('#bt1').click(function(){
+                n++
+                $('li').not(n).css('color','red')
+                $('li').eq(n).css('color','blue')
+
+                if(n==6) n=-1
+                    
+                
+                
+               
+                
+
+                
+            })
+            $('#bt2').click(function() {
+                $('#bt1').css('background','pink')
+                $('li').slice(2,5).css('color','green')
+            })
+
+
+        })
+        
+        
+        
+
+    </script>
+
+</head>
+<body>
+    <button id="bt1">클릭</button>
+    <button id="bt2">xxxxxx</button>
+    <ul id="ul">
+        <li>1번째</li>
+        <li id="li2">2번째</li>
+        <li>3번째</li>
+        <li>4번째</li>
+        <li>5번째</li>
+        <li>6번째</li>
+        <li>7번째</li>
+    </ul>
+</body>
+</html>

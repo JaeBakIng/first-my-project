@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getElementsByTagName</title>
+</head>
+<body>
+    <p>첫번째 p태그</p>
+    <p>두번째 p태그</p>
+    <p>세번째 p태그</p>
+    <p id="xx">네번째 p태그</p>
+    <p id="yy">다섯번째 p태그</p>
+    <script>
+        
+        var p=document.getElementsByTagName('p') // p라는변수로써 모든 p태그의 속성을 가져와서 변수p에 넣어줌
+        var xx= document.getElementById('xx') // 메소드 라서 document 써줌
+        var yy=document.querySelector('#yy')
+        p[0].style.color='red' // getElementsByTagName는 개수가3개로 배열이라서 p[0]과 같이 써줘야댐
+
+        p[1].style.color='blue'
+        p[1].style.fontSize='30px'
+
+        p[2].style.color='green'
+
+
+        xx.style.color='pink'
+
+       document.body.style.backgroundColor='cyan'
+       document.body.style.fontFamily='궁서체'
+
+       yy.style.fontSize='40px'
+
+       
+       
+
+
+    </script>
+</body>
+</html>

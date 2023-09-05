@@ -1,0 +1,5 @@
+print( type('뛰어서') )
+print( type(100) )
+print( type(11.5) )
+print( type(True) )
+print( type(False) )

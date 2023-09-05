@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>input type radio</title>
+
+    
+    <input type="radio" name="fruits" value="apple" onclick="ff1()">사과</input>
+    <input type="radio" name="fruits" value="banana" onclick="ff2()">바나나</input>
+    <p id="fruits">과일</p>
+</head>
+<body>
+    
+
+
+    <script>
+       var fruits = document.getElementById("fruits")
+       var n1 = 0
+       var n2 = 0
+       var px = 10 //픽셀
+
+
+        function ff1() {
+            px += 3
+            fruits.style.fontSize= px +'px'
+           
+            n1++
+            fruits.innerHTML = "Apple " + n1 + "번클릭"
+            if (n1%2==1) {
+                fruits.style.backgroundColor="yellow"
+                fruits.style.color="red"
+            }
+            else {
+                fruits.style.backgroundColor="red"
+                fruits.style.color="yellow"
+            }
+            document.title=n1+','+n2
+        
+        }
+
+        function ff2() {
+            px -= 3
+            
+            n2++
+            fruits.innerHTML = "Banana " + n2 + "번클릭"
+           
+            
+            if (n2%2==0) {
+                fruits.style.backgroundColor = 'black'
+                fruits.style.color = 'orange'
+            }
+            else {
+                fruits.style.backgroundColor = 'cyan'
+                fruits.style.color = 'blue'
+            }
+            document.title=n1+','+n2
+            
+        }
+       
+
+    </script>
+    
+</body>
+</html>

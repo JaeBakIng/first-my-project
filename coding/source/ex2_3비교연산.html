@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>비교연산자</title>
+</head>
+<body>
+    <script>
+        var a=10 , b=20;
+        var x=30 , y=40;
+        var res;
+        res=a>b||x>y; //false||false
+        document.write("<br>res=",res);
+
+        res=a>b||x<y||a<y; //false||false||true ||는 or연산자
+        document.write("<br>res=",res);
+
+        res=a<b&&b<x&&x<y; //모두다 true &&는 and연산자
+        document.write("<br>res=",res); 
+
+        res=!(a>x); // !는 not //true
+        document.write("<br>res=",res);
+
+       
+    </script>
+</body>
+</html>

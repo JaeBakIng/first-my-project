@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jscode/jquery-3.6.1.min.js"></script>
+    <script>
+        var n = 0
+        $(function() {  //$는 제이쿼리 표시방법
+            $('#ul').css('color','red')
+
+
+            $('#bt1').click(function(){
+                 $('#li2').css('color','blue')
+
+                 $('li').not(':first').css('background','gold') //첫번째 인덱스 빼고 전부다
+
+                 $('li:nth-child(3)').css('background','pink') // 이거뺴고 다 인덱스로함
+                 
+                 $('li').eq(0).css('background','green') //첫번째 li 인덱스 background green
+
+                 $('li:odd').css('background','cyan') // 인덱스 반영 odd 는 홀수 even 은 짝수
+
+                 $('li:last').css('font-size','30px') //마지막 li 의 fontsize 30px
+                //('li').last() 와 같음
+            })
+
+
+            $('#bt2').click(function(){
+            n++
+            document.title=n+'번째 클릭'
+            if(n%2==0) {
+                $('li:odd').css('background','cyan')
+                $('li:even').css('background','pink')
+                $('li:last').html('22060022').css('color','black').css('font-size','10px')
+            }
+            else {
+                $('li:even').css('background','gold')
+                $('li:odd').css('background','green')
+                $('li:last').html('박민재').css('color','black').css('font-size','30px')
+            }
+        })
+        }
+        )
+        
+
+    </script>
+
+</head>
+<body>
+    <button id="bt1">클릭</button>
+    <button id="bt2">클릭2</button>
+    <ul id="ul">
+        <li>1번째</li>
+        <li id="li2">2번째</li>
+        <li>3번째</li>
+        <li>4번째</li>
+        <li>5번째</li>
+        <li>6번째</li>
+        <li>7번째</li>
+    </ul>
+</body>
+</html>
